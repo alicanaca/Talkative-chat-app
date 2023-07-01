@@ -14,7 +14,7 @@ import typingAnimation from '../../animations/typing.json'
 import sendingAnimation from '../../animations/send.json'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const ENDPOINT = "http://localhost:5000"
+const ENDPOINT = "https://talkative-i08b.onrender.com"
 var socket, selectedChatCompare
 
 const SingleChat = ({ fetchAgain, setFetchAgain, notifSend, setNotifSend }) => {
