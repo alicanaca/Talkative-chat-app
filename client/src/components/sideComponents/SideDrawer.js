@@ -71,7 +71,7 @@ const SideDrawer = () => {
                     Authorization: `Bearer ${user.token}`
                 }
             }
-            const { data } = await axios.get(`http://localhost:5000/user?search=${search}`, config)
+            const { data } = await axios.get(`https://talkative-i08b.onrender.com/user?search=${search}`, config)
             setLoading(false)
             setSearchResult(data)
         } catch (error) {
@@ -138,7 +138,7 @@ const SideDrawer = () => {
                     Authorization: `Bearer ${user.token}`
                 }
             }
-            const { data } = await axios.post("http://localhost:5000/chat", { userId }, config)
+            const { data } = await axios.post("https://talkative-i08b.onrender.com/chat", { userId }, config)
             if (!chats.find((c) => c._id === data._id)) { setChats([data, ...chats]) }
             setLoadingChat(false)
             setSelectedChat(data)

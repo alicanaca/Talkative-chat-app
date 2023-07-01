@@ -87,7 +87,7 @@ const Signup = () => {
                     "Content-type": "application/json"
                 }
             }
-            const { data } = await axios.post("http://localhost:5000/user", { name, email, password, pic }, config)
+            const { data } = await axios.post("https://talkative-i08b.onrender.com/user", { name, email, password, pic }, config)
             toast({
                 title: "Registration is successful",
                 status: "success",

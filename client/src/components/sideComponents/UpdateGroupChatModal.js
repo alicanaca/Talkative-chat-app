@@ -34,7 +34,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             }
-            const { data } = await axios.put("http://localhost:5000/chat/groupremove",
+            const { data } = await axios.put("https://talkative-i08b.onrender.com/chat/groupremove",
                 {
                     chatId: selectedChat._id,
                     userId: user1._id
@@ -83,7 +83,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             }
-            const { data } = await axios.put("http://localhost:5000/chat/groupadd",
+            const { data } = await axios.put("https://talkative-i08b.onrender.com/chat/groupadd",
                 {
                     chatId: selectedChat._id,
                     userId: user1._id
@@ -112,7 +112,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             }
-            const { data } = await axios.put("http://localhost:5000/chat/rename",
+            const { data } = await axios.put("https://talkative-i08b.onrender.com/chat/rename",
                 {
                     chatId: selectedChat._id,
                     chatName: groupChatName
@@ -146,7 +146,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             }
-            const { data } = await axios.get(`http://localhost:5000/user?search=${search}`, config)
+            const { data } = await axios.get(`https://talkative-i08b.onrender.com/user?search=${search}`, config)
             setLoading(false)
             setSearchResult(data)
         } catch (error) {

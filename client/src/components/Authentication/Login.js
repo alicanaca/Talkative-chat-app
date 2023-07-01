@@ -32,7 +32,7 @@ const Login = () => {
                     "Content-type": "application/json"
                 }
             }
-            const { data } = await axios.post("http://localhost:5000/user/login", { email, password }, config)
+            const { data } = await axios.post("https://talkative-i08b.onrender.com/user/login", { email, password }, config)
             toast({
                 title: "Login is successful",
                 status: "success",

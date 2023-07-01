@@ -86,7 +86,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain, notifSend, setNotifSend }) => {
                 }
             }
             setLoading(true)
-            const { data } = await axios.get(`http://localhost:5000/messages/${selectedChat._id}`, config)
+            const { data } = await axios.get(`https://talkative-i08b.onrender.com/messages/${selectedChat._id}`, config)
             setLoading(false)
             setMessages(data)
             socket.emit('join chat', selectedChat._id)
@@ -116,7 +116,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain, notifSend, setNotifSend }) => {
                 setNewMessage("")
                 setSend(true)
 
-                const { data } = await axios.post("http://localhost:5000/messages", {
+                const { data } = await axios.post("https://talkative-i08b.onrender.com/messages", {
                     content: newMessage,
                     chatId: selectedChat._id
                 }, config)
@@ -155,7 +155,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain, notifSend, setNotifSend }) => {
             }
             setNewMessage("")
             setSend(true)
-            const { data } = await axios.post("http://localhost:5000/messages", {
+            const { data } = await axios.post("https://talkative-i08b.onrender.com/messages", {
                 content: newMessage,
                 chatId: selectedChat._id
             }, config)

@@ -20,7 +20,7 @@ const MyChats = ({ fetchAgain, notifSend }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             }
-            const { data } = await axios.get("http://localhost:5000/chat", config)
+            const { data } = await axios.get("https://talkative-i08b.onrender.com/chat", config)
             setChats(data)
         } catch (error) {
             toast({

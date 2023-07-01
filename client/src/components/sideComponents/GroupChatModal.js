@@ -28,7 +28,7 @@ const GroupChatModal = ({ children }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             }
-            const { data } = await axios.get(`http://localhost:5000/user?search=${search}`, config)
+            const { data } = await axios.get(`https://talkative-i08b.onrender.com/user?search=${search}`, config)
             setLoading(false)
             setSearchResult(data)
         } catch (error) {
@@ -61,7 +61,7 @@ const GroupChatModal = ({ children }) => {
                     Authorization: `Bearer ${user.token}`
                 }
             }
-            const { data } = await axios.post("http://localhost:5000/chat/group", {
+            const { data } = await axios.post("https://talkative-i08b.onrender.com/chat/group", {
                 name: groupChatName,
                 users: JSON.stringify(selectedUsers.map((user) => { return user._id }))
             }, config)
